@@ -5,6 +5,7 @@
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -12,22 +13,95 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.logo:hover{
+  transform: scale(1.1);
+  cursor: pointer;
+}
+  @media (minWidth:400px) {
+    .logo{
+    
+    }
+  }
+  .float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:40px;
+	background-color:#0C9;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+	box-shadow: 2px 2px 3px #999;
+}
+.page-container{
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
+  overflow-x: hidden;
+  }
+  .wrap-content{
+    flex:1;
+    margin: 0px 10px;
+    /* background-color:#D6DCED */
+  }
+  
+    .footer{
+    background-color: bisque;
+    height: 120px;
+       }
+.App-header {
+ 
+  height: 100px;
+  display: block;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
+@media (min-width:300px) {
+  .App-header{
+    height: 80px;
+  }
+}
+.container-grid{
+  display:block ;
+}
 .App-link {
   color: #61dafb;
 }
+.linkHeader{
+  font-size: 16px;
+  font-weight: 500;
+  font-style: normal;
+  color: #000 !important;
+  text-decoration:none !important;
+  
+}
+.touchlink:any-link{
+  color:white ;
+  text-decoration:none !important;
+  font-weight: 600;
+}
+.touchlink:any-link:hover{
+  
+  color: #fcfdfd;
+  cursor: pointer;
 
+
+}
+.touchlink:any-link:checked{
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+
+
+}
+.touchlinkfooter:any-link{
+   color:white ;
+  text-decoration:none !important;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -35,4 +109,62 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.Grid1{
+  
+margin-bottom:'15px !important';
+font-weight:500;
+font-size:'14px';
+cursor: pointer;
+
+}
+* {
+  box-sizing: border-box; 
+}
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #080812 !important;
+}
+
+header {
+  background-color: silver;
+}
+
+.curve {
+  color: white;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  padding: 3rem 2rem;
+  width: 100%;
+  z-index: 2;
+ 
+}
+
+  .curve::before {
+    content: '';
+    display: block;
+    background: radial-gradient(ellipse at center, rgba(75, 10, 95, 0.349) 25%,rgb(219 125 235) 100%);
+    position: absolute;
+    left: 40%;
+    bottom: 0;
+    transform: translateX(-50%);
+    border-radius: 150vw;
+    width: 300vw;
+    height: 300vw;
+    z-index: -1;
+  }
+
+
+.more {
+  background-color: silver;
+  padding: 1rem 2rem;
+  text-align: center;
+}
+.IconStyles{
+  color:'#95c12b !important'
 }
